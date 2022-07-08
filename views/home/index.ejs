@@ -1,0 +1,55 @@
+<!-----Header Import------>
+<%- include('./../partials/header.ejs') %>
+
+
+    <!------Body Content------->
+
+    <h3>
+        <%= new Date() %>
+    </h3>
+
+    <h1>Hello Fucking World!!</h1>
+
+    <p>Name: <%= myName %>
+    </p>
+
+    <p>
+        <%= Arr[0].title %>
+    </p>
+
+
+    <div>
+        <% for(let item of Arr) { %>
+
+            <p>
+                <%= item.title %>
+            </p>
+
+            <% } %>
+    </div>
+
+    <h2>
+        <%= title %>
+    </h2>
+
+
+
+    <div>
+        <% for(let i of Arr) { %>
+
+            <% if(i.completed) { %>
+
+                <p>
+                    <%= i.title %>
+                </p>
+
+                <% } else{ %>
+                    <p>Not Completed</p>
+                    <% } %>
+
+                        <% } %>
+    </div>
+
+
+    <!-----Footer Import------>
+    <%- include('./../partials/footer.ejs') %>
